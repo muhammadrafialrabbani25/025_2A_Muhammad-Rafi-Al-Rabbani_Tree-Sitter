@@ -1,5 +1,7 @@
 """Contoh file Python >=100 baris untuk menguji jelajah.py (Tugas 2)."""
 
+import os
+from pathlib import Path
 
 class Mahasiswa:
     def __init__(self, nama, nim, jurusan):
