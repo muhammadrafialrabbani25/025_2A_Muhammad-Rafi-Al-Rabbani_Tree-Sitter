@@ -1,0 +1,1 @@
+status = "aktif" and umur > 17 or (kategori in ["a", "b"] and nama contains "budi")
