@@ -1,1 +1,1 @@
-status = "aktif" and umur > 17 or (kategori in ["a", "b"] and nama contains "budi")
+not status = "aktif" and umur > 17 or (kategori in ["a", "b"] and nama contains "budi") and aktif = true

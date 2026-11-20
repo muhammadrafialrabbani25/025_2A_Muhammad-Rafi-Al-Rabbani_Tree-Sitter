@@ -87,3 +87,30 @@ nama contains "budi"
   (contains_expression
     (identifier)
     (string)))
+
+==================
+Not expression
+==================
+
+not status = "aktif"
+
+---
+
+(source_file
+  (not_expression
+    (comparison_expression
+      field: (identifier)
+      (string))))
+
+==================
+Boolean value
+==================
+
+aktif = true
+
+---
+
+(source_file
+  (comparison_expression
+    field: (identifier)
+    (boolean)))
