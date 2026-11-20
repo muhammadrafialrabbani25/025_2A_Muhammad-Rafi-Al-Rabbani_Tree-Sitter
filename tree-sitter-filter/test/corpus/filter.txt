@@ -1,0 +1,89 @@
+==================
+Perbandingan sederhana
+==================
+
+status = "aktif"
+
+---
+
+(source_file
+  (comparison_expression
+    (identifier)
+    (string)))
+
+==================
+And dua kondisi
+==================
+
+status = "aktif" and umur > 17
+
+---
+
+(source_file
+  (and_expression
+    (comparison_expression
+      (identifier)
+      (string))
+    (comparison_expression
+      (identifier)
+      (number))))
+
+==================
+Or dua kondisi
+==================
+
+status = "aktif" or umur > 17
+
+---
+
+(source_file
+  (or_expression
+    (comparison_expression
+      (identifier)
+      (string))
+    (comparison_expression
+      (identifier)
+      (number))))
+
+==================
+Prioritas and lebih tinggi dari or
+==================
+
+a or b and c
+
+---
+
+(source_file
+  (or_expression
+    (identifier)
+    (and_expression
+      (identifier)
+      (identifier))))
+
+==================
+In expression
+==================
+
+kategori in ["a", "b"]
+
+---
+
+(source_file
+  (in_expression
+    (identifier)
+    (list
+      (string)
+      (string))))
+
+==================
+Contains expression
+==================
+
+nama contains "budi"
+
+---
+
+(source_file
+  (contains_expression
+    (identifier)
+    (string)))
